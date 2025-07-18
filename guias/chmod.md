@@ -11,6 +11,8 @@ O `chmod` ajusta permissões, sendo essencial para garantir que scripts e arquiv
 - [Sugestões de automação & integração](#sugestões-de-automação--integração)
 - [Veja também](#veja-também)
 - [Dicas](#dicas)
+- [Dicas Avançadas](#dicas-avançadas)
+- [Exemplo Visual](#exemplo-visual)
 
 ---
 
@@ -122,3 +124,30 @@ Evita alterações acidentais no arquivo para todos os usuários.
   ```bash
   find . -name "*.sh" -exec chmod +x {} \;
   ```
+
+---
+
+## Exemplo Visual
+
+### Entrada e saída do terminal
+
+```bash
+ls -l main.sh
+```
+```
+-rw-r--r-- 1 user user 212 Jul 18 09:59 main.sh
+```
+
+```bash
+chmod +x main.sh
+ls -l main.sh
+```
+```
+-rwxr-xr-x 1 user user 212 Jul 18 09:59 main.sh
+```
+
+### Gif ou imagem ilustrativa
+
+![Comparação visual: permissões antes e depois do chmod](../assets/chmod-diff.png)
+
+---

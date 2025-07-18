@@ -11,6 +11,8 @@ O `curl` é uma ferramenta poderosa para baixar arquivos, consumir e testar APIs
 - [Sugestões de automação & integração](#sugestões-de-automação--integração)
 - [Veja também](#veja-também)
 - [Dicas](#dicas)
+- [Dicas Avançadas](#dicas-avançadas)
+- [Exemplo Visual](#exemplo-visual)
 
 ---
 
@@ -144,3 +146,35 @@ curl -H "Authorization: Bearer $TOKEN" https://api.meuservico.com/v1/users
   ```bash
   alias checar_url='curl -Is'
   ```
+
+---
+
+## Exemplo Visual
+
+### Entrada e saída do terminal
+
+```bash
+curl -I https://exemplo.com
+```
+```
+HTTP/2 200
+date: Fri, 18 Jul 2025 20:12:00 GMT
+content-type: text/html; charset=UTF-8
+content-length: 1270
+server: nginx/1.18.0 (Ubuntu)
+...
+```
+
+```bash
+curl -O https://exemplo.com/arquivo.zip
+ls -lh arquivo.zip
+```
+```
+-rw-r--r-- 1 user user 1.3M Jul 18 20:15 arquivo.zip
+```
+
+### Gif ou imagem ilustrativa
+
+![Exemplo visual do uso do curl para baixar arquivos e consultar headers](../assets/curl-exemplo.gif)
+
+---

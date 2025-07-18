@@ -11,6 +11,8 @@ O `find` é uma ferramenta poderosa para localizar arquivos e diretórios, remov
 - [Sugestões de automação & integração](#sugestões-de-automação--integração)
 - [Veja também](#veja-também)
 - [Dicas](#dicas)
+- [Dicas Avançadas](#dicas-avançadas)
+- [Exemplo Visual](#exemplo-visual)
 
 ---
 
@@ -140,3 +142,40 @@ Procura arquivos `.js` ignorando a pasta `node_modules`.
   ```bash
   find . \( -name "*.log" -o -name "*.tmp" \) -delete
   ```
+
+---
+
+## Exemplo Visual
+
+### Entrada e saída do terminal
+
+```bash
+find . -name "*.js"
+```
+```
+./src/index.js
+./src/utils/helpers.js
+./scripts/gerar_relatorio.js
+```
+
+```bash
+find . -type f -size +1M
+```
+```
+./assets/video_tutorial.mp4
+./data/backup.db
+```
+
+```bash
+find . -name "*.log" -exec rm {} \;
+ls *.log
+```
+```
+ls: cannot access '*.log': No such file or directory
+```
+
+### Gif ou imagem ilustrativa
+
+![Exemplo visual do uso do find para listar e remover arquivos](../assets/find-exemplo.gif)
+
+---

@@ -11,6 +11,8 @@ O `ls` é um dos comandos mais utilizados no terminal. Ele serve para listar arq
 - [Sugestões de automação & integração](#sugestões-de-automação--integração)
 - [Veja também](#veja-também)
 - [Dicas](#dicas)
+- [Dicas Avançadas](#dicas-avançadas)
+- [Exemplo Visual](#exemplo-visual)
 
 ---
 
@@ -150,3 +152,44 @@ Filtra para mostrar apenas diretórios (útil para ver a estrutura de módulos/p
   ```bash
   ls -ltu
   ```
+
+---
+
+## Exemplo Visual
+
+### Entrada e saída do terminal
+
+```bash
+ls -lh
+```
+```
+total 24K
+drwxr-xr-x 2 user user 4.0K Jul 18 20:12 scripts
+-rw-r--r-- 1 user user 1.2K Jul 18 09:58 README.md
+-rw-r--r-- 1 user user 2.1K Jul 18 09:59 main.py
+-rw-r--r-- 1 user user 1.0K Jul 18 20:10 comandos_ls.md
+```
+
+```bash
+ls -la
+```
+```
+drwxr-xr-x 5 user user 4.0K Jul 18 20:12 .
+drwxr-xr-x 9 user user 4.0K Jul 18 19:55 ..
+-rw-r--r-- 1 user user 1.2K Jul 18 09:58 .gitignore
+-rw-r--r-- 1 user user 2.1K Jul 18 09:59 main.py
+-rw-r--r-- 1 user user 1.0K Jul 18 20:10 comandos_ls.md
+```
+
+```bash
+ls -l | grep "^d"
+```
+```
+drwxr-xr-x 2 user user 4096 Jul 18 20:12 scripts
+```
+
+### Gif ou imagem ilustrativa
+
+![Exemplo visual do uso do ls para listar arquivos e pastas](../assets/ls-exemplo.gif)
+
+---

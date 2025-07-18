@@ -11,6 +11,8 @@ O `tree` exibe a estrutura do projeto em formato de árvore, facilitando a compr
 - [Sugestões de automação & integração](#sugestões-de-automação--integração)
 - [Veja também](#veja-também)
 - [Dicas](#dicas)
+- [Dicas Avançadas](#dicas-avançadas)
+- [Exemplo Visual](#exemplo-visual)
 
 ---
 
@@ -116,3 +118,51 @@ tree -sh
   ```bash
   alias t2='tree -L 2 -d'
   ```
+
+---
+
+## Exemplo Visual
+
+### Entrada e saída do terminal
+
+```bash
+tree -L 2
+```
+```
+.
+├── README.md
+├── guias
+│   ├── chmod.md
+│   ├── curl.md
+│   └── grep.md
+├── scripts
+│   ├── buscar_texto.sh
+│   └── limpar_logs.sh
+└── exemplos
+    └── main.py
+```
+
+```bash
+tree -d
+```
+```
+.
+├── guias
+├── scripts
+└── exemplos
+```
+
+```bash
+tree -P '*.js'
+```
+```
+.
+└── scripts
+    └── processa.js
+```
+
+### Gif ou imagem ilustrativa
+
+![Visualização do comando tree mostrando a estrutura de um projeto](../assets/tree-exemplo.gif)
+
+---

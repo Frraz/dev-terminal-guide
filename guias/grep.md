@@ -11,6 +11,8 @@ O `grep` é fundamental para localizar rapidamente funções, variáveis, anota�
 - [Sugestões de automação & integração](#sugestões-de-automação--integração)
 - [Veja também](#veja-também)
 - [Dicas](#dicas)
+- [Dicas Avançadas](#dicas-avançadas)
+- [Exemplo Visual](#exemplo-visual)
 
 ---
 
@@ -126,3 +128,39 @@ Encontra funções que seguem o padrão `setNomeDaFuncao`.
   ```bash
   alias gtodo='grep -r --color=auto "TODO" .'
   ```
+
+---
+
+## Exemplo Visual
+
+### Entrada e saída do terminal
+
+```bash
+grep -rnw . -e "minhaFuncao"
+```
+```
+src/app.js:42:function minhaFuncao() {
+src/utils/helpers.js:10:export function minhaFuncao() {
+```
+
+```bash
+grep -r "TODO" .
+```
+```
+src/index.js:5:// TODO: refatorar esta função
+src/routes/user.js:88:// TODO: adicionar validação de entrada
+```
+
+```bash
+grep -ri "token" .
+```
+```
+.env:1:DATABASE_TOKEN=abc123
+src/auth.js:17:const Token = require('./token');
+```
+
+### Gif ou imagem ilustrativa
+
+![Exemplo visual do uso do grep para buscas no código](../assets/grep-exemplo.gif)
+
+---
