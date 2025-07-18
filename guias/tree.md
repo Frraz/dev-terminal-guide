@@ -89,3 +89,30 @@ tree -sh
 - Consulte `man tree` para opções avançadas de filtragem e exibição.
 
 ---
+
+## Dicas Avançadas
+
+- Gere a estrutura da árvore e salve em um arquivo:
+  ```bash
+  tree -L 3 > estrutura.txt
+  ```
+
+- Veja apenas diretórios:
+  ```bash
+  tree -d
+  ```
+
+- Combine com `grep` para encontrar pastas:
+  ```bash
+  tree | grep config
+  ```
+
+- Ignore múltiplos padrões:
+  ```bash
+  tree -I 'node_modules|.git|dist'
+  ```
+
+- Alias para mostrar até o segundo nível apenas com diretórios:
+  ```bash
+  alias t2='tree -L 2 -d'
+  ```

@@ -119,3 +119,34 @@ Filtra para mostrar apenas diretórios (útil para ver a estrutura de módulos/p
 - Consulte `man ls` para ver todas as opções disponíveis.
 
 ---
+
+## Dicas Avançadas
+
+- Combine `ls` com pipes para filtrar resultados:
+  ```bash
+  ls -lh | grep ".sh"
+  ```
+  Lista apenas arquivos `.sh`, com detalhes.
+
+- Use `ls -lhS` para listar arquivos do maior para o menor.
+
+- Exiba o caminho completo dos arquivos:
+  ```bash
+  ls -ld $PWD/*
+  ```
+
+- Alias útil para listar tudo com detalhes e tamanhos legíveis:
+  ```bash
+  alias ll='ls -lh'
+  alias la='ls -lha'
+  ```
+
+- Liste apenas diretórios:
+  ```bash
+  ls -l | grep "^d"
+  ```
+
+- Liste arquivos e ordene por data de acesso:
+  ```bash
+  ls -ltu
+  ```

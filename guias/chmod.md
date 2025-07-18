@@ -95,3 +95,30 @@ Evita alterações acidentais no arquivo para todos os usuários.
 - Consulte `man chmod` para mais opções e detalhes sobre modos simbólicos e octais.
 
 ---
+
+## Dicas Avançadas
+
+- Remova permissão de execução de todos os scripts de uma pasta:
+  ```bash
+  chmod -x scripts/*.sh
+  ```
+
+- Aplique permissões recursivamente:
+  ```bash
+  chmod -R 700 pasta_secreta/
+  ```
+
+- Veja permissões numericamente:
+  ```bash
+  stat -c "%a %n" *
+  ```
+
+- Alias para tornar todos scripts Shell executáveis:
+  ```bash
+  alias xall='chmod +x *.sh'
+  ```
+
+- Combine com `find` para alterar permissões em lote:
+  ```bash
+  find . -name "*.sh" -exec chmod +x {} \;
+  ```

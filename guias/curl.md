@@ -117,3 +117,30 @@ curl -H "Authorization: Bearer $TOKEN" https://api.meuservico.com/v1/users
 - Consulte `man curl` para opções avançadas e suporte a outros protocolos.
 
 ---
+
+## Dicas Avançadas
+
+- Veja apenas os headers de uma resposta:
+  ```bash
+  curl -I https://exemplo.com
+  ```
+
+- Siga redirecionamentos automaticamente:
+  ```bash
+  curl -L https://encurtador.com/xyz
+  ```
+
+- Combine com `jq` para formatar JSON:
+  ```bash
+  curl -s https://api.github.com/repos/usuario/repositorio | jq '.name, .stargazers_count'
+  ```
+
+- Salve cookies de sessão:
+  ```bash
+  curl -c cookies.txt https://site.com/login
+  ```
+
+- Alias para testar se uma URL está ativa:
+  ```bash
+  alias checar_url='curl -Is'
+  ```

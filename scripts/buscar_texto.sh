@@ -1,20 +1,19 @@
 #!/bin/bash
-# Uso: ./buscar_texto.sh "termo"
-# Busca recursivamente um termo em todos os arquivos do diretório atual e destaca o resultado.
+# Script: buscar_texto.sh
+# Busca por um ou mais termos em arquivos do projeto, de modo recursivo.
+# Uso:
+#   ./buscar_texto.sh termo1 termo2 ...
+# Exemplo:
+#   ./buscar_texto.sh TODO FIXME
 
-if [ -z "$1" ]; then
-  echo "Uso: $0 \"termo\""
+if [ $# -eq 0 ]; then
+  echo "Uso: $0 termo1 [termo2 ...]"
   exit 1
 fi
 
-echo "Buscando por \"$1\" em todos os arquivos..."
-grep -rin --color=auto "$1" .
-
-# Explicação:
-# - grep: comando de busca de texto
-# - -r: busca recursiva
-# - -i: ignora maiúsculas/minúsculas
-# - -n: mostra o número da linha
-# - --color=auto: destaca o termo encontrado
-# - "$1": termo buscado (primeiro argumento passado ao script)
-# - .: busca no diretório atual
+# Percorre todos os termos passados como argumento
+for termo in "$@"; do
+  echo "Buscando por: $termo"
+  # grep: -r (recursivo), -n (linha), --color (destaca)
+  grep -rn --color=auto "$termo" .
+done

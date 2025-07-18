@@ -113,3 +113,30 @@ Procura arquivos `.js` ignorando a pasta `node_modules`.
 - Sempre teste seus comandos sem `-delete` antes de executar ações destrutivas.
 
 ---
+
+## Dicas Avançadas
+
+- Exclua diretórios da busca:
+  ```bash
+  find . -name "*.js" -not -path "./node_modules/*"
+  ```
+
+- Use com `xargs` para processar arquivos em lote:
+  ```bash
+  find . -name "*.log" | xargs grep "ERRO"
+  ```
+
+- Encontre arquivos grandes:
+  ```bash
+  find . -type f -size +10M
+  ```
+
+- Alias útil para limpar arquivos temporários:
+  ```bash
+  alias limpar_tmp='find . -name "*.tmp" -delete'
+  ```
+
+- Combine com múltiplos critérios:
+  ```bash
+  find . \( -name "*.log" -o -name "*.tmp" \) -delete
+  ```

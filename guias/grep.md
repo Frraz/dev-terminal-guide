@@ -99,3 +99,30 @@ Encontra funções que seguem o padrão `setNomeDaFuncao`.
 - Combine com pipes (`|`) para refinar buscas em fluxos de comandos.
 
 ---
+
+## Dicas Avançadas
+
+- Ignore maiúsculas/minúsculas ao buscar:
+  ```bash
+  grep -i "token" arquivo.txt
+  ```
+
+- Veja apenas o nome dos arquivos que contêm o termo:
+  ```bash
+  grep -rl "TODO" .
+  ```
+
+- Mostre linhas ao redor do resultado (contexto):
+  ```bash
+  grep -C 3 "erro" logs/app.log
+  ```
+
+- Use múltiplos padrões (regex):
+  ```bash
+  grep -E "TODO|FIXME" *.js
+  ```
+
+- Alias para busca recursiva por TODOs:
+  ```bash
+  alias gtodo='grep -r --color=auto "TODO" .'
+  ```
