@@ -1,13 +1,13 @@
 # Guia Prático de Comandos de Terminal para Desenvolvimento de Software
 
-Este repositório tem como objetivo ser um guia de referência rápido e prático para comandos e scripts de terminal que facilitam o dia a dia no desenvolvimento de software.
+Este repositório reúne comandos, scripts e dicas essenciais para uso do terminal no desenvolvimento de software. O objetivo é ser uma referência rápida e prática, com exemplos reais e explicações claras, tanto para iniciantes quanto para desenvolvedores experientes.
 
 ## O que você encontra aqui?
 
-- Comandos essenciais (como `ls`, `tree`, `find`, `grep`, `chmod`, `curl`, entre outros)
-- Exemplos reais comentados e explicações linha a linha
-- Scripts prontos para automação de tarefas comuns
-- Dicas e boas práticas para uso eficiente do terminal
+- **Comandos comuns** (`ls`, `tree`, `find`, `grep`, `chmod`, `curl` e outros), explicados e exemplificados
+- **Scripts prontos** para automações cotidianas
+- **Exemplos reais** comentados linha por linha
+- **Dicas e boas práticas** de terminal para desenvolvedores
 
 ## Estrutura do Repositório
 
@@ -23,8 +23,13 @@ Este repositório tem como objetivo ser um guia de referência rápido e prátic
     └── permissao_exemplo.sh
 ```
 
-## Contribua!
+- **README.md**: Apresentação e instruções gerais
+- **guias/**: Documentação e tutoriais sobre comandos
+- **scripts/**: Scripts prontos para uso
+- **exemplos/**: Exemplos comentados linha a linha
 
-Sugestões, correções e novos comandos são muito bem-vindos. Faça um fork, abra um pull request ou crie uma issue.
+## Como contribuir
+
+Sugestões, correções e novos comandos são bem-vindos! Faça um fork, abra um pull request ou crie uma issue.
 
 ---
